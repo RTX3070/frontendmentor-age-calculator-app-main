@@ -1,0 +1,220 @@
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    align-items: center;
+    background-color: var(--off-white);
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    background-color: var(--white);
+    border-radius: 2.5rem 2.5rem 26% 2.5rem;
+    width: 90%;
+    padding: 5rem 2.5rem;
+    max-width: 75rem;
+}
+
+form {
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 6.2rem;
+    position: relative;
+}
+
+form button {
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    bottom: -3rem;
+    cursor: pointer;
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    transition: background-color .2s ease;
+    transform: translateX(-50%);
+    width: 6rem;
+}
+
+form button img {
+    width: 50%;
+}
+
+form button:hover {
+    background-color: var(--off-black);
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    width: 8.5rem;
+}
+
+.form-group:nth-of-type(2) {
+    margin: 0 1.5rem;
+}
+
+.form-group label {
+    color: var(--smokey-grey);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.form-group input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    border: 1px solid var(--light-grey);
+    border-radius: .8rem;
+    color: var(--off-black);
+    font-size: 2.0rem;
+    font-weight: 700;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+}
+
+.form-group input[type=number]::placeholder {
+    color: var(--smokey-grey);
+    font-weight: 700;
+}
+
+.form-group input[type=number]:focus {
+    outline: 1px solid var(--purple);
+}
+
+.form-group p {
+    bottom: -2.3rem;
+    font-size: .8rem;
+    font-style: italic;
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+}
+
+.form-group.error label {
+    color: var(--light-red);
+}
+
+.form-group.error input[type="number"] {
+    border: 1px solid var(--light-red);
+}
+
+.form-group.error p {
+    color: var(--light-red);
+}
+
+.age-display {
+    margin-top: 6.2rem;
+}
+
+.age-display p {
+    color: var(--off-black);
+    font-size: 4.8rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.age-display .dashes {
+    color: var(--purple);
+}
+
+.attribution {
+    color: var(--smokey-grey);
+    bottom: 0;
+    font-size: 1.2rem;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--light-red);
+}
+
+@media only screen and (min-width: 850px) {
+    main {
+        padding: 5rem;
+    }
+
+    form {
+        padding-bottom: 4.5rem;
+    }
+
+    form button {
+        bottom: -4.5rem;
+        height: 9rem;
+        left: unset;
+        right: 0;
+        transform: unset;
+        width: 9rem;
+    }
+
+    .form-group {
+        width: 14rem;
+    }
+
+    .form-group:nth-of-type(2) {
+        margin: 0 3rem;
+    }
+
+    .form-group label {
+        font-size: 1.4rem;
+    }
+
+    .form-group input[type=number] {
+        font-size: 3.2rem;
+        padding: 1rem 0 1rem 2rem;
+    }
+
+    .form-group p {
+        font-size: 1.2rem;
+    }
+
+    .age-display {
+        margin-top: 4.5rem;
+    }
+    
+    .age-display p {
+        font-size: 9.6rem;
+        line-height: 1.1;
+    }
+}
